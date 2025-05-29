@@ -10,7 +10,7 @@
 //#include "gui_guider/generated/gui_guider.h"
 //#include "gui_guider/generated/events_init.h"
 
-#define DISP_BUF_SIZE (320 * 240)
+#define DISP_BUF_SIZE (240 * 320)
 
 /*定义GUI GUIDER创建的UI结构体*/
 //lv_ui guider_ui;
@@ -35,8 +35,8 @@ int main(void)
     lv_disp_drv_init(&disp_drv);
     disp_drv.draw_buf   = &disp_buf;
     disp_drv.flush_cb   = fbdev_flush;
-    disp_drv.hor_res    = 320;
-    disp_drv.ver_res    = 240;
+    disp_drv.hor_res    = 240;
+    disp_drv.ver_res    = 320;
     /* 旋转屏幕 */
     // disp_drv.sw_rotate  = 1;
     // disp_drv.rotated    = LV_DISP_ROT_90;
@@ -61,7 +61,7 @@ int main(void)
 #endif
 
     /*Create a Demo*/
-    //lv_demo_widgets();
+    lv_demo_widgets();
     //lv_demo_benchmark();
     //lv_demo_music();
     //lv_demo_widgets();
